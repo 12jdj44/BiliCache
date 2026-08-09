@@ -81,6 +81,14 @@ DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解�
 - **失败 Toast（v1.8）**：版本未匹配、FLV Hook 未挂上、设置入口注入失败都会直接 Toast 提示，
   不依赖 logcat 也能定位问题。
 
+## v1.9：修复 8.75 设置入口 + 解析结果日志
+
+- 设置入口的点击监听器接口在 8.75 里被混淆（`Preference$OnPreferenceClickListener` 不存在），
+  改为**按 `setOnPreferenceClickListener` 的参数类型动态创建**，兼容所有版本；
+- 播放解析 Hook 增加**结果日志**：记录返回的 PlayIndex（播放路径/分段数/画质），
+  以及是否抛异常，便于定位黑屏到底是解析失败还是播放器不支持；
+- Toast 内容同步写入日志，MIUI 屏蔽 Toast 时也能在日志里看到。
+
 ## 确认模块生效
 
 1. LSPosed 管理器 → 模块勾选 “Bili Cache” → **作用域勾选 `tv.danmaku.bili`** → 重启；
