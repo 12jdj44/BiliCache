@@ -2,13 +2,15 @@ package com.bilicache;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
+import android.os.Bundle;
 
 import java.io.File;
+import java.lang.reflect.Proxy;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XC_MethodReplacement;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
@@ -85,30 +87,47 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             return;
         }
 
-        // 1) 迁移成功次数读取器 -> 恒为 0（主开关）
+        // 1) 迁移成功次数读取器 -> 恒为 0（功能开关：识别旧版缓存）
         try {
             XposedHelpers.findAndHookMethod(
                     cfg[0], classLoader, cfg[1],
-                    XC_MethodReplacement.returnConstant(0));
+                    new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) {
+                            if (BiliPrefs.recognizeOldCache()) {
+                                param.setResult(0);
+                            }
+                        }
+                    });
             XposedBridge.log("[BiliCache] " + versionCode + " (" + versionName
                     + ") getter hooked: " + cfg[0] + "#" + cfg[1] + " -> 0");
         } catch (Throwable t) {
             XposedBridge.log("[BiliCache] getter hook failed " + cfg[0] + "#" + cfg[1] + ": " + t);
         }
 
-        // 2) 迁移完成判断 gate -> 恒为 false（保险，并禁用无效缓存清理）
+        // 2) 迁移完成判断 gate -> 恒为 false（保险，并禁用无效缓存清理；受同一开关控制）
         try {
             XposedHelpers.findAndHookMethod(
                     cfg[2], classLoader, cfg[3],
-                    XC_MethodReplacement.returnConstant(false));
+                    new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) {
+                            if (BiliPrefs.recognizeOldCache()) {
+                                param.setResult(false);
+                            }
+                        }
+                    });
             XposedBridge.log("[BiliCache] " + versionCode + " (" + versionName
                     + ") gate hooked: " + cfg[2] + "#" + cfg[3] + " -> false");
         } catch (Throwable t) {
             XposedBridge.log("[BiliCache] gate hook failed " + cfg[2] + "#" + cfg[3] + ": " + t);
         }
 
-        // 3) 旧版格式输出：拦截 entry.json / index.json 的写入，改成旧版字段
+        // 3) 旧版格式输出：拦截 entry.json / index.json 的写入（受功能开关控制）
         hookOldFormatOutput(classLoader);
+
+        // 4) 在 B 站「设置」页注入 Bili Cache 入口
+        hookSettingsEntry(classLoader);
     }
 
     /**
@@ -125,9 +144,11 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                     new XC_MethodHook() {
                         @Override
                         protected void beforeHookedMethod(MethodHookParam param) {
-                            String converted = toOldFormat((String) param.args[1]);
-                            if (converted != null) {
-                                param.args[1] = converted;
+                            if (BiliPrefs.oldFormatOutput()) {
+                                String converted = toOldFormat((String) param.args[1]);
+                                if (converted != null) {
+                                    param.args[1] = converted;
+                                }
                             }
                         }
                     });
@@ -144,9 +165,11 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                     new XC_MethodHook() {
                         @Override
                         protected void beforeHookedMethod(MethodHookParam param) {
-                            String converted = toOldFormat((String) param.args[1]);
-                            if (converted != null) {
-                                param.args[1] = converted;
+                            if (BiliPrefs.oldFormatOutput()) {
+                                String converted = toOldFormat((String) param.args[1]);
+                                if (converted != null) {
+                                    param.args[1] = converted;
+                                }
                             }
                         }
                     });
@@ -161,9 +184,11 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                     new XC_MethodHook() {
                         @Override
                         protected void beforeHookedMethod(MethodHookParam param) {
-                            String converted = toOldFormat((String) param.args[1]);
-                            if (converted != null) {
-                                param.args[1] = converted;
+                            if (BiliPrefs.oldFormatOutput()) {
+                                String converted = toOldFormat((String) param.args[1]);
+                                if (converted != null) {
+                                    param.args[1] = converted;
+                                }
                             }
                         }
                     });
@@ -226,5 +251,82 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             }
         }
         return null;
+    }
+
+    /**
+     * 在 B 站设置页（PreferenceFragment）里注入 “Bili Cache” 入口。
+     * BiliPreferencesFragment 所有版本都有；WideBiliPreferencesFragment 仅 9.0+。
+     */
+    private static void hookSettingsEntry(ClassLoader classLoader) {
+        String[] fragments = {
+                "com.bilibili.app.preferences.BiliPreferencesActivity$BiliPreferencesFragment",
+                "com.bilibili.app.preferences.fragment.WideBiliPreferencesFragment"
+        };
+        for (String fragment : fragments) {
+            try {
+                XposedHelpers.findAndHookMethod(
+                        fragment, classLoader, "onCreatePreferences",
+                        Bundle.class, String.class,
+                        new XC_MethodHook() {
+                            @Override
+                            protected void afterHookedMethod(MethodHookParam param) {
+                                try {
+                                    addBiliCacheEntry(param.thisObject, classLoader);
+                                } catch (Throwable t) {
+                                    XposedBridge.log("[BiliCache] add settings entry failed: " + t);
+                                }
+                            }
+                        });
+                XposedBridge.log("[BiliCache] settings entry injected into " + fragment);
+            } catch (Throwable t) {
+                XposedBridge.log("[BiliCache] settings hook skip " + fragment + ": " + t);
+            }
+        }
+    }
+
+    private static void addBiliCacheEntry(Object fragment, ClassLoader classLoader) throws Throwable {
+        Context context = (Context) XposedHelpers.callMethod(fragment, "getContext");
+        Object screen = XposedHelpers.callMethod(fragment, "getPreferenceScreen");
+        if (context == null || screen == null) {
+            return;
+        }
+
+        Class<?> preferenceClass = XposedHelpers.findClass(
+                "androidx.preference.Preference", classLoader);
+        Object preference = XposedHelpers.newInstance(preferenceClass, context);
+        XposedHelpers.callMethod(preference, "setTitle", "Bili Cache");
+        XposedHelpers.callMethod(preference, "setSummary", "旧版缓存识别 / 旧版格式写缓存");
+
+        Class<?> listenerClass = Class.forName(
+                "androidx.preference.Preference$OnPreferenceClickListener", false, classLoader);
+        Object listener = Proxy.newProxyInstance(
+                classLoader,
+                new Class<?>[]{listenerClass},
+                (proxy, method, args) -> {
+                    if ("onPreferenceClick".equals(method.getName())) {
+                        startBiliCacheSettings(context);
+                        return true;
+                    }
+                    return false;
+                });
+        XposedHelpers.callMethod(preference, "setOnPreferenceClickListener", listener);
+
+        // 尽量插到列表最前面，失败则追加到末尾
+        try {
+            XposedHelpers.callMethod(screen, "addPreference", 0, preference);
+        } catch (Throwable t) {
+            XposedHelpers.callMethod(screen, "addPreference", preference);
+        }
+    }
+
+    private static void startBiliCacheSettings(Context context) {
+        try {
+            Intent intent = new Intent();
+            intent.setClassName("com.bilicache", "com.bilicache.MainActivity");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+        } catch (Throwable t) {
+            XposedBridge.log("[BiliCache] open settings failed: " + t);
+        }
     }
 }

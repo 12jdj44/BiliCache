@@ -43,6 +43,21 @@ LSPosed 模块：让 B 站 **8.61.0 - 9.6.0（共 52 个版本）** 启动时**�
 普通 UGC 视频无影响（season_id 本就为 0）。`cover.jpg`/`danmaku.pb` 仍会照常下载
 （旧版读取时会忽略多余文件）。
 
+## 设置开关
+
+两个功能可单独开关（默认都开启）：
+
+- **识别旧版缓存**：控制 getter/gate Hook（全盘扫描登记 + 禁用无效缓存清理）
+- **旧版格式写缓存**：控制 entry.json / index.json 的旧版格式转换
+
+开关位置：
+
+1. 模块自己的应用页（桌面图标 “Bili Cache”），带卡片式开关界面；
+2. **B 站「我的 → 设置」页面最底部**会注入一个 “Bili Cache” 入口，点击直达模块设置页。
+
+开关保存在模块的 `bilicache_settings` SharedPreferences 中，
+Hook 每次调用实时读取（LSPosed XSharedPreferences），修改后立即生效，无需重启。
+
 ## 版本适配范围
 
 | 版本区间 | getter 类 | gate |
