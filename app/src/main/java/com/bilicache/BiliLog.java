@@ -4,8 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,6 +33,8 @@ public final class BiliLog {
     private static final StringBuilder BUFFER = new StringBuilder();
     private static volatile Context sContext;
     private static volatile String sLatestExport;
+    private static volatile String sLastExportedContent = "";
+    private static volatile String sLastToast;
 
     private BiliLog() {
     }
@@ -63,13 +68,17 @@ public final class BiliLog {
         return BUFFER.toString();
     }
 
-    /** 导出当前日志到公共 Download 目录，返回文件路径（失败返回 null）。 */
+    /** 导出当前日志到公共 Download 目录（多级回退），返回文件路径（失败返回 null）。 */
     public static synchronized String exportToDownloads() {
         Context ctx = sContext;
         if (ctx == null) {
             return null;
         }
         String content = dump();
+        if (content.equals(sLastExportedContent) && sLatestExport != null) {
+            return sLatestExport;
+        }
+        // 1) Android 11+ / MediaStore
         try {
             if (Build.VERSION.SDK_INT >= 29) {
                 ContentValues values = new ContentValues();
@@ -79,31 +88,80 @@ public final class BiliLog {
                 Uri uri = ctx.getContentResolver().insert(
                         MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
                 if (uri == null) {
-                    return null;
+                    log("export: MediaStore insert returned null");
+                } else {
+                    OutputStream os = ctx.getContentResolver().openOutputStream(uri);
+                    if (os != null) {
+                        os.write(content.getBytes(StandardCharsets.UTF_8));
+                        os.flush();
+                        os.close();
+                        sLastExportedContent = content;
+                        sLatestExport = "Download/BiliCache.log";
+                        return sLatestExport;
+                    }
+                    log("export: MediaStore openOutputStream null");
                 }
-                OutputStream os = ctx.getContentResolver().openOutputStream(uri);
-                if (os != null) {
-                    os.write(content.getBytes(StandardCharsets.UTF_8));
-                    os.flush();
-                    os.close();
-                    sLatestExport = uri.toString();
-                    return "Download/BiliCache.log";
-                }
-                return null;
             }
+        } catch (Throwable t) {
+            log("export: MediaStore failed: " + t);
+        }
+        // 2) 旧版公共 Download 路径（API < 29，或 API 29 需 WRITE_EXTERNAL_STORAGE）
+        try {
             File dir = Environment.getExternalStoragePublicDirectory(
                     Environment.DIRECTORY_DOWNLOADS);
             if (dir == null || !dir.exists() && !dir.mkdirs()) {
-                return null;
+                log("export: public Download dir unavailable");
+            } else {
+                File file = new File(dir, "BiliCache.log");
+                writeFile(file, content);
+                sLastExportedContent = content;
+                sLatestExport = file.getAbsolutePath();
+                return sLatestExport;
             }
-            File file = new File(dir, "BiliCache.log");
-            writeFile(file, content);
-            sLatestExport = file.getAbsolutePath();
-            return file.getAbsolutePath();
         } catch (Throwable t) {
-            log("exportToDownloads error: " + t);
-            return null;
+            log("export: public Download dir failed: " + t);
         }
+        // 3) B 站外部 files/Download（Android/data/tv.danmaku.bili/files/Download）
+        try {
+            File dir = ctx.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
+            if (dir == null || !dir.exists() && !dir.mkdirs()) {
+                log("export: app Download dir unavailable");
+            } else {
+                File file = new File(dir, "BiliCache.log");
+                writeFile(file, content);
+                sLastExportedContent = content;
+                sLatestExport = file.getAbsolutePath();
+                return sLatestExport;
+            }
+        } catch (Throwable t) {
+            log("export: app Download dir failed: " + t);
+        }
+        return null;
+    }
+
+    /** 导出结果 Toast（状态变化时提示一次）。 */
+    public static synchronized void toastExportResult(String result) {
+        if (result == null || result.equals(sLastToast)) {
+            return;
+        }
+        sLastToast = result;
+        toast(result);
+    }
+
+    public static void toast(final String message) {
+        final Context ctx = sContext;
+        if (ctx == null) {
+            return;
+        }
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Toast.makeText(ctx, message, Toast.LENGTH_LONG).show();
+                } catch (Throwable ignored) {
+                }
+            }
+        });
     }
 
     private static void appendToLocalFile(String line) {
