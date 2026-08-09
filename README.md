@@ -63,7 +63,12 @@ DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解�
 
 设置页新增“导出日志”开关：开启后，模块（运行在 B 站进程内）会把所有 Hook 事件
 持续同步到公共 `Download/BiliCache.log`；同时在 LSPosed 日志中也能过滤
-`[BiliCache]` 标签查看。排障时开启该开关 → 重启 B 站 → 复现问题 → 取日志即可。
+`[BiliCache]` 标签查看。导出采用多级回退：
+1. `Download/BiliCache.log`（MediaStore，Android 11+ 无需权限）；
+2. 旧版公共 Download 路径（需存储权限）；
+3. `/sdcard/Android/data/tv.danmaku.bili/files/Download/BiliCache.log`（无权限要求）。
+
+每次导出结果会 Toast 提示路径；排障流程：开启开关 → 重启 B 站 → 复现问题 → 取日志。
 
 ## 版本适配范围
 
