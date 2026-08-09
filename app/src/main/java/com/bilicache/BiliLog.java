@@ -149,6 +149,7 @@ public final class BiliLog {
     }
 
     public static void toast(final String message) {
+        log("toast: " + message);
         final Context ctx = sContext;
         if (ctx == null) {
             return;
