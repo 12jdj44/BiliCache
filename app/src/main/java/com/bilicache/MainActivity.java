@@ -64,28 +64,15 @@ public class MainActivity extends Activity {
                 "启动时全盘扫描下载目录，自动把旧版缓存登记进数据库，无需清数据/重置计数；同时禁用“无效缓存清理”",
                 swRecognize));
 
-        // 功能卡片 2：旧版格式写缓存
-        final Switch swOldFormat = new Switch(this);
-        swOldFormat.setChecked(prefs.getBoolean(BiliPrefs.KEY_OLD_FORMAT_OUTPUT, true));
-        root.addView(buildCard(
-                "旧版格式写缓存",
-                "新版下载/更新缓存时，把 entry.json、index.json 按旧版格式写入（seasion_id、bilidrm_uri 等），旧版 App 可直接读取",
-                swOldFormat));
-
         SharedPreferences.OnSharedPreferenceChangeListener listener = (prefs1, key) -> {
             boolean recognize = prefs1.getBoolean(BiliPrefs.KEY_RECOGNIZE_OLD_CACHE, true);
-            boolean oldFormat = prefs1.getBoolean(BiliPrefs.KEY_OLD_FORMAT_OUTPUT, true);
             if (swRecognize.isChecked() != recognize) {
                 swRecognize.setChecked(recognize);
-            }
-            if (swOldFormat.isChecked() != oldFormat) {
-                swOldFormat.setChecked(oldFormat);
             }
         };
         prefs.registerOnSharedPreferenceChangeListener(listener);
 
         swRecognize.setOnCheckedChangeListener((buttonView, isChecked) -> save(BiliPrefs.KEY_RECOGNIZE_OLD_CACHE, isChecked));
-        swOldFormat.setOnCheckedChangeListener((buttonView, isChecked) -> save(BiliPrefs.KEY_OLD_FORMAT_OUTPUT, isChecked));
 
         // 页脚
         TextView footer = new TextView(this);
