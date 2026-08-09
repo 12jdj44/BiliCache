@@ -81,6 +81,10 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         BiliLog.log("module loaded, versionCode=" + versionCode
                 + " versionName=" + versionName + " package=" + context.getPackageName());
         startExportLoop();
+        BiliLog.toast("BiliCache 模块已加载 v1.7");
+
+        // 通用配置 Hook：不依赖版本映射，直接拦迁移计数读取（识别旧版缓存主开关的兜底）
+        hookUniversalConfig(classLoader);
 
         String[] cfg = VersionMap.MAP.get(versionCode);
         if (cfg == null) {
@@ -138,6 +142,66 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         hookFlvPlaybackFix(classLoader);
     }
 
+    /**
+     * 通用兜底：直接拦截 kntr.base.config 读取 "c_db_migrate_success_times"，
+     * 恒返回 "0"，使“迁移已完成”判断永远不成立。
+     * 各版本配置类/方法名/参数顺序都不同（d#a / d#c / d#d / i#a），按签名动态发现。
+     */
+    private static void hookUniversalConfig(ClassLoader classLoader) {
+        for (String name : new String[]{"kntr.base.config.d", "kntr.base.config.i"}) {
+            try {
+                Class<?> configClass = Class.forName(name, false, classLoader);
+                int count = 0;
+                for (java.lang.reflect.Method m : configClass.getDeclaredMethods()) {
+                    Class<?>[] pts = m.getParameterTypes();
+                    if (pts.length == 3 && m.getReturnType() == Object.class
+                            && containsStringParam(pts)) {
+                        XposedHelpers.findAndHookMethod(
+                                configClass, m.getName(), pts[0], pts[1], pts[2],
+                                configHook());
+                        count++;
+                        BiliLog.log("universal config hook: " + name + "#" + m.getName()
+                                + " (recognize fallback)");
+                    }
+                }
+                if (count == 0) {
+                    BiliLog.log("universal config hook: no matching method in " + name);
+                }
+            } catch (Throwable t) {
+                BiliLog.log("universal config hook skip " + name + ": " + t);
+            }
+        }
+    }
+
+    private static boolean containsStringParam(Class<?>[] pts) {
+        for (Class<?> p : pts) {
+            if (p == String.class) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static XC_MethodHook configHook() {
+        return new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) {
+                try {
+                    for (Object arg : param.args) {
+                        if (arg instanceof String && "c_db_migrate_success_times".equals(arg)) {
+                            if (BiliPrefs.recognizeOldCache()) {
+                                param.setResult("0");
+                            }
+                            return;
+                        }
+                    }
+                } catch (Throwable t) {
+                    BiliLog.log("config hook error: " + t);
+                }
+            }
+        };
+    }
+
     private static volatile boolean sExportLoopStarted;
 
     private static void startExportLoop() {
@@ -180,10 +244,9 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         try {
             Class<?> entityClass = XposedHelpers.findClass(
                     "video.biz.offline.base.model.entity.OfflineVideoEntity", classLoader);
-            XposedHelpers.findAndHookMethod(
-                    "com.bilibili.koffline.resolver.OfflineResolverKt", classLoader, "f",
-                    entityClass, File.class,
-                    new XC_MethodHook() {
+            Class<?> resolverClass = XposedHelpers.findClass(
+                    "com.bilibili.koffline.resolver.OfflineResolverKt", classLoader);
+            XC_MethodHook hook = new XC_MethodHook() {
                         @Override
                         protected void beforeHookedMethod(MethodHookParam param) {
                             try {
@@ -203,8 +266,23 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 BiliLog.log("FLV resolver fix error: " + t);
                             }
                         }
-                    });
-            BiliLog.log("hooked OfflineResolverKt.f (FLV playback fix)");
+                    };
+            // 方法名因版本而异（8.75 是 i，9.6 是 f），按签名动态匹配
+            boolean hooked = false;
+            for (java.lang.reflect.Method m : resolverClass.getDeclaredMethods()) {
+                Class<?>[] pts = m.getParameterTypes();
+                if (pts.length == 2 && pts[0] == entityClass && pts[1] == File.class) {
+                    XposedHelpers.findAndHookMethod(
+                            resolverClass, m.getName(), pts[0], pts[1], hook);
+                    BiliLog.log("hooked OfflineResolverKt." + m.getName()
+                            + "(OfflineVideoEntity, File) (FLV playback fix)");
+                    hooked = true;
+                    break;
+                }
+            }
+            if (!hooked) {
+                BiliLog.log("OfflineResolverKt: no (OfflineVideoEntity, File) method found");
+            }
         } catch (Throwable t) {
             BiliLog.log("OfflineResolverKt hook skip: " + t);
         }
