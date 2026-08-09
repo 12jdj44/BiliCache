@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
 
+import java.io.File;
+import java.lang.reflect.Field;
 import java.lang.reflect.Proxy;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
@@ -122,6 +124,117 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
 
         // 4) 在 B 站「设置」页注入 Bili Cache 入口
         hookSettingsEntry(classLoader);
+
+        // 5) 兼容极老 FLV 分段缓存（lua.* / *.blv）：播放时强制按 FLV 解析
+        hookFlvPlaybackFix(classLoader);
+    }
+
+    /**
+     * 极老缓存（B 站 5.x-6.x 时代）是 FLV 分段格式：
+     *   <avid>/<page>/lua.flvXXX.bili2api.<qn>/0.blv
+     * 但这类 entry.json 没有 media_type 字段，新版扫描时默认当成 DASH，
+     * 播放解析会去 DASH 分支找 video.m4s -> 找不到 -> 黑屏/损坏。
+     * 这里在播放解析前把媒体类型强制改成 FLV，让解析器走 .blv 分段分支。
+     */
+    private static void hookFlvPlaybackFix(ClassLoader classLoader) {
+        // 1) 播放解析入口：OfflineResolverKt.f(entity, mediaDir)
+        try {
+            Class<?> entityClass = XposedHelpers.findClass(
+                    "video.biz.offline.base.model.entity.OfflineVideoEntity", classLoader);
+            XposedHelpers.findAndHookMethod(
+                    "com.bilibili.koffline.resolver.OfflineResolverKt", classLoader, "f",
+                    entityClass, File.class,
+                    new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) {
+                            try {
+                                File dir = (File) param.args[1];
+                                if (dir != null && containsBlv(dir)) {
+                                    forceFlvMediaType(param.args[0]);
+                                }
+                            } catch (Throwable t) {
+                                XposedBridge.log("[BiliCache] FLV resolver fix error: " + t);
+                            }
+                        }
+                    });
+            XposedBridge.log("[BiliCache] hooked OfflineResolverKt.f (FLV playback fix)");
+        } catch (Throwable t) {
+            XposedBridge.log("[BiliCache] OfflineResolverKt hook skip: " + t);
+        }
+
+        // 2) 扫描入口：entry 的 type_tag 以 lua. 开头（FLV 格式特征）时，登记时就直接标 FLV
+        try {
+            XposedHelpers.findAndHookMethod(
+                    "video.biz.offline.base.infra.utils.i", classLoader, "e", File.class,
+                    new XC_MethodHook() {
+                        @Override
+                        protected void afterHookedMethod(MethodHookParam param) {
+                            try {
+                                Object entity = param.getResult();
+                                if (entity == null) {
+                                    return;
+                                }
+                                if (hasLuaTypeTag(entity)) {
+                                    forceFlvMediaType(entity);
+                                }
+                            } catch (Throwable t) {
+                                XposedBridge.log("[BiliCache] FLV scan fix error: " + t);
+                            }
+                        }
+                    });
+            XposedBridge.log("[BiliCache] hooked utils.i#e (FLV scan fix)");
+        } catch (Throwable t) {
+            XposedBridge.log("[BiliCache] utils.i#e hook skip: " + t);
+        }
+    }
+
+    private static boolean containsBlv(File dir) {
+        File[] files = dir.listFiles();
+        if (files == null) {
+            return false;
+        }
+        for (File f : files) {
+            if (f != null && f.getName().endsWith(".blv")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean hasLuaTypeTag(Object entity) {
+        try {
+            for (Field f : entity.getClass().getDeclaredFields()) {
+                f.setAccessible(true);
+                Object v = f.get(entity);
+                if (v instanceof String && ((String) v).startsWith("lua.")) {
+                    return true;
+                }
+            }
+        } catch (Throwable ignored) {
+        }
+        return false;
+    }
+
+    /**
+     * 通过反射把实体的 MediaType 枚举字段设为 FLV（不依赖混淆后的字段名）。
+     */
+    private static void forceFlvMediaType(Object entity) {
+        try {
+            for (Field f : entity.getClass().getDeclaredFields()) {
+                f.setAccessible(true);
+                Object v = f.get(entity);
+                if (v != null && v.getClass().isEnum()
+                        && v.getClass().getName().contains("MediaType")
+                        && !"FLV".equals(v.toString())) {
+                    Object flv = Enum.valueOf((Class<Enum>) v.getClass(), "FLV");
+                    f.set(entity, flv);
+                    XposedBridge.log("[BiliCache] forced MediaType -> FLV for " + entity);
+                    return;
+                }
+            }
+        } catch (Throwable t) {
+            XposedBridge.log("[BiliCache] forceFlvMediaType error: " + t);
+        }
     }
 
     /**
