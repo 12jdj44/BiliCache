@@ -18,6 +18,9 @@ public final class BiliPrefs {
     /** 【已弃用】功能2：新版按旧版格式写缓存（entry/index.json 转换）—— 实测无效，已停用 */
     public static final String KEY_OLD_FORMAT_OUTPUT = "old_format_output";
 
+    /** export log to public Download/BiliCache.log */
+    public static final String KEY_EXPORT_LOG = "export_log";
+
     private static volatile XSharedPreferences sPrefs;
 
     private BiliPrefs() {
@@ -25,6 +28,10 @@ public final class BiliPrefs {
 
     public static boolean recognizeOldCache() {
         return getBoolean(KEY_RECOGNIZE_OLD_CACHE, true);
+    }
+
+    public static boolean exportLog() {
+        return getBoolean(KEY_EXPORT_LOG, false);
     }
 
     private static boolean getBoolean(String key, boolean def) {
