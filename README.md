@@ -46,6 +46,19 @@ LSPosed 模块：让 B 站 **8.61.0 - 9.6.0（共 52 个版本）** 启动时**�
 开关保存在模块的 `bilicache_settings` SharedPreferences 中，
 Hook 每次调用实时读取（LSPosed XSharedPreferences），修改后立即生效，无需重启。
 
+## 极老 FLV 缓存兼容（v1.4）
+
+B 站 5.x-6.x 时代的缓存是 FLV 分段格式：
+
+```
+<avid>/<page>/lua.flvXXX.bili2api.<qn>/0.blv
+```
+
+这类 entry.json 没有 `media_type` 字段，新版扫描时默认当成 DASH，播放时会去
+DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解析前把媒体类型
+强制改为 FLV（检测到目录里存在 `.blv` 文件），并让扫描登记时直接标记为 FLV，
+旧版 FLV 缓存即可在新版正常播放。
+
 ## 版本适配范围
 
 | 版本区间 | getter 类 | gate |
