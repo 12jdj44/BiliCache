@@ -70,6 +70,24 @@ DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解�
 
 每次导出结果会 Toast 提示路径；排障流程：开启开关 → 重启 B 站 → 复现问题 → 取日志。
 
+## v1.7：适配 8.75 及其它版本
+
+- **播放解析 Hook 改为按签名动态匹配**：`OfflineResolverKt` 里找
+  `(OfflineVideoEntity, File)` 方法（8.75 叫 `i`，9.6 叫 `f`），FLV 修复对所有版本生效；
+- **通用配置兜底 Hook**：动态发现 `kntr.base.config.d/i` 的配置读取方法，
+  拦截 `c_db_migrate_success_times` 恒返回 0——即使版本号不在映射表里，
+  “识别旧版缓存”也能工作；
+- **模块加载 Toast**：B 站启动时 Toast 提示“BiliCache 模块已加载”，方便确认模块是否生效。
+
+## 确认模块生效
+
+1. LSPosed 管理器 → 模块勾选 “Bili Cache” → **作用域勾选 `tv.danmaku.bili`** → 重启；
+2. 打开 B 站：启动时应有 “BiliCache 模块已加载” Toast；
+3. B 站「我的 → 设置」顶部出现 “Bili Cache” 入口；
+4. LSPosed 日志可过滤 `[BiliCache]`。
+
+以上任一项出现都说明模块已生效；若都没有，请检查 LSPosed 模块是否启用、作用域是否勾选。
+
 ## 版本适配范围
 
 | 版本区间 | getter 类 | gate |
