@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Bundle;
 
 import java.io.File;
@@ -61,21 +63,28 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 PackageInfo info = context
                                         .getPackageManager()
                                         .getPackageInfo(context.getPackageName(), 0);
-                                applyHooks(lpparam.classLoader, info.versionCode, info.versionName);
+                                applyHooks(lpparam.classLoader, info.versionCode,
+                                        info.versionName, context);
                             } catch (Throwable t) {
-                                XposedBridge.log("[BiliCache] attach hook error: " + t);
+                                BiliLog.log("attach hook error: " + t);
                             }
                         }
                     });
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] handleLoadPackage failed: " + t);
+            BiliLog.log("handleLoadPackage failed: " + t);
         }
     }
 
-    private static void applyHooks(ClassLoader classLoader, int versionCode, String versionName) {
+    private static void applyHooks(ClassLoader classLoader, int versionCode,
+                                   String versionName, Context context) {
+        BiliLog.init(context);
+        BiliLog.log("module loaded, versionCode=" + versionCode
+                + " versionName=" + versionName + " package=" + context.getPackageName());
+        startExportLoop();
+
         String[] cfg = VersionMap.MAP.get(versionCode);
         if (cfg == null) {
-            XposedBridge.log("[BiliCache] unsupported versionCode " + versionCode
+            BiliLog.log("unsupported versionCode " + versionCode
                     + " (" + versionName + "), supported: " + VersionMap.MAP.size()
                     + " versions (8.61.0-9.6.0)");
             return;
@@ -93,10 +102,10 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                             }
                         }
                     });
-            XposedBridge.log("[BiliCache] " + versionCode + " (" + versionName
+            BiliLog.log(versionCode + " (" + versionName
                     + ") getter hooked: " + cfg[0] + "#" + cfg[1] + " -> 0");
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] getter hook failed " + cfg[0] + "#" + cfg[1] + ": " + t);
+            BiliLog.log("getter hook failed " + cfg[0] + "#" + cfg[1] + ": " + t);
         }
 
         // 2) 迁移完成判断 gate -> 恒为 false（保险，并禁用无效缓存清理；受同一开关控制）
@@ -111,10 +120,10 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                             }
                         }
                     });
-            XposedBridge.log("[BiliCache] " + versionCode + " (" + versionName
+            BiliLog.log(versionCode + " (" + versionName
                     + ") gate hooked: " + cfg[2] + "#" + cfg[3] + " -> false");
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] gate hook failed " + cfg[2] + "#" + cfg[3] + ": " + t);
+            BiliLog.log("gate hook failed " + cfg[2] + "#" + cfg[3] + ": " + t);
         }
 
         // 3) 【已弃用】旧版格式写缓存：
@@ -127,6 +136,31 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
 
         // 5) 兼容极老 FLV 分段缓存（lua.* / *.blv）：播放时强制按 FLV 解析
         hookFlvPlaybackFix(classLoader);
+    }
+
+    private static volatile boolean sExportLoopStarted;
+
+    private static void startExportLoop() {
+        if (sExportLoopStarted) {
+            return;
+        }
+        sExportLoopStarted = true;
+        final Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (BiliPrefs.exportLog()) {
+                        String path = BiliLog.exportToDownloads();
+                        if (path != null) {
+                            BiliLog.log("log exported: " + path);
+                        }
+                    }
+                } catch (Throwable ignored) {
+                }
+                new Handler(Looper.getMainLooper()).postDelayed(this, 3000);
+            }
+        };
+        new Handler(Looper.getMainLooper()).postDelayed(task, 3000);
     }
 
     /**
@@ -149,17 +183,25 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                         protected void beforeHookedMethod(MethodHookParam param) {
                             try {
                                 File dir = (File) param.args[1];
-                                if (dir != null && containsBlv(dir)) {
-                                    forceFlvMediaType(param.args[0]);
+                                Object entity = param.args[0];
+                                String mediaType = describeMediaType(entity);
+                                String files = dir == null ? "null" : listFiles(dir);
+                                boolean hasBlv = dir != null && containsBlv(dir);
+                                BiliLog.log("resolve f() dir=" + dir + " mediaType=" + mediaType
+                                        + " hasBlv=" + hasBlv + " files=" + files);
+                                if (hasBlv) {
+                                    forceFlvMediaType(entity);
+                                    BiliLog.log("resolve f() after force: mediaType="
+                                            + describeMediaType(entity));
                                 }
                             } catch (Throwable t) {
-                                XposedBridge.log("[BiliCache] FLV resolver fix error: " + t);
+                                BiliLog.log("FLV resolver fix error: " + t);
                             }
                         }
                     });
-            XposedBridge.log("[BiliCache] hooked OfflineResolverKt.f (FLV playback fix)");
+            BiliLog.log("hooked OfflineResolverKt.f (FLV playback fix)");
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] OfflineResolverKt hook skip: " + t);
+            BiliLog.log("OfflineResolverKt hook skip: " + t);
         }
 
         // 2) 扫描入口：entry 的 type_tag 以 lua. 开头（FLV 格式特征）时，登记时就直接标 FLV
@@ -174,17 +216,56 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 if (entity == null) {
                                     return;
                                 }
+                                BiliLog.log("scan entry -> entity " + entity
+                                        + " typeTag lua=" + hasLuaTypeTag(entity));
                                 if (hasLuaTypeTag(entity)) {
                                     forceFlvMediaType(entity);
                                 }
                             } catch (Throwable t) {
-                                XposedBridge.log("[BiliCache] FLV scan fix error: " + t);
+                                BiliLog.log("FLV scan fix error: " + t);
                             }
                         }
                     });
-            XposedBridge.log("[BiliCache] hooked utils.i#e (FLV scan fix)");
+            BiliLog.log("hooked utils.i#e (FLV scan fix)");
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] utils.i#e hook skip: " + t);
+            BiliLog.log("utils.i#e hook skip: " + t);
+        }
+
+        // 3) 离线诊断校验入口：validateLocalResource(entity)，同样强制 FLV 并记录结果
+        try {
+            Class<?> entityClass = XposedHelpers.findClass(
+                    "video.biz.offline.base.model.entity.OfflineVideoEntity", classLoader);
+            XposedHelpers.findAndHookMethod(
+                    "video.biz.offline.base.infra.utils.o", classLoader, "a",
+                    entityClass,
+                    new XC_MethodHook() {
+                        @Override
+                        protected void beforeHookedMethod(MethodHookParam param) {
+                            try {
+                                Object entity = param.args[0];
+                                BiliLog.log("validateLocalResource start: " + entity
+                                        + " mediaType=" + describeMediaType(entity)
+                                        + " lua=" + hasLuaTypeTag(entity));
+                                if (hasLuaTypeTag(entity)) {
+                                    forceFlvMediaType(entity);
+                                }
+                            } catch (Throwable t) {
+                                BiliLog.log("validate hook error: " + t);
+                            }
+                        }
+
+                        @Override
+                        protected void afterHookedMethod(MethodHookParam param) {
+                            try {
+                                BiliLog.log("validateLocalResource result=" + param.getResult());
+                            } catch (Throwable t) {
+                                BiliLog.log("validate after error: " + t);
+                            }
+                        }
+                    });
+            BiliLog.log("hooked utils.o#a (validation FLV fix)");
+        } catch (Throwable t) {
+            BiliLog.log("utils.o#a hook skip: " + t);
         }
     }
 
@@ -228,13 +309,43 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                         && !"FLV".equals(v.toString())) {
                     Object flv = Enum.valueOf((Class<Enum>) v.getClass(), "FLV");
                     f.set(entity, flv);
-                    XposedBridge.log("[BiliCache] forced MediaType -> FLV for " + entity);
+                    f.set(entity, flv);
+                    BiliLog.log("forced MediaType -> FLV for " + entity);
                     return;
                 }
             }
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] forceFlvMediaType error: " + t);
+            BiliLog.log("forceFlvMediaType error: " + t);
         }
+    }
+
+    private static String describeMediaType(Object entity) {
+        try {
+            for (Field f : entity.getClass().getDeclaredFields()) {
+                f.setAccessible(true);
+                Object v = f.get(entity);
+                if (v != null && v.getClass().isEnum()
+                        && v.getClass().getName().contains("MediaType")) {
+                    return v.toString();
+                }
+            }
+        } catch (Throwable ignored) {
+        }
+        return "unknown";
+    }
+
+    private static String listFiles(File dir) {
+        StringBuilder sb = new StringBuilder("[");
+        File[] files = dir.listFiles();
+        if (files != null) {
+            for (File f : files) {
+                sb.append(f.getName()).append("(").append(f.length()).append(") ");
+            }
+        } else {
+            sb.append("null");
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
     /**
@@ -257,13 +368,13 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 try {
                                     addBiliCacheEntry(param.thisObject, classLoader);
                                 } catch (Throwable t) {
-                                    XposedBridge.log("[BiliCache] add settings entry failed: " + t);
+                                    BiliLog.log("add settings entry failed: " + t);
                                 }
                             }
                         });
-                XposedBridge.log("[BiliCache] settings entry injected into " + fragment);
+                BiliLog.log("settings entry injected into " + fragment);
             } catch (Throwable t) {
-                XposedBridge.log("[BiliCache] settings hook skip " + fragment + ": " + t);
+                BiliLog.log("settings hook skip " + fragment + ": " + t);
             }
         }
     }
@@ -310,7 +421,7 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         } catch (Throwable t) {
-            XposedBridge.log("[BiliCache] open settings failed: " + t);
+            BiliLog.log("open settings failed: " + t);
         }
     }
 }
