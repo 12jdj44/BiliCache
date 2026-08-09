@@ -26,29 +26,17 @@ LSPosed 模块：让 B 站 **8.61.0 - 9.6.0（共 52 个版本）** 启动时**�
 
 所以装上模块后，只要把旧缓存目录放进正确的下载目录，重启应用（或等它下次扫描）即可识别。
 
-## 附加功能：新版缓存直接写成旧版格式
+## ~~旧版格式写缓存（已弃用）~~
 
-模块还会拦截新版 App 写入缓存元数据，把输出转成旧版（legacy）格式，
-这样新版下载/更新的缓存，旧版 App 也能直接读取：
-
-- `entry.json`：`season_id` -> `seasion_id`，去掉 `ep:null`
-- `index.json`：`bilidrmUri` -> `bilidrm_uri`，去掉 `widevinePssh`，
-  补 `dash_drm_type`/`audio_stream_type`，audio 条目去掉 `frame_rate`
-
-实现方式：Hook `kotlinx.io.Utf8Kt.writeString$default` 和
-`com.bilibili.commons.io.FileUtils.writeStringToFile`，只处理包含新版特征字段的 JSON，
-其它写入不受影响。
-
-注意：转换后 entry.json 使用 `seasion_id`，新版自身读取时 season 相关字段会按旧键名解析；
-普通 UGC 视频无影响（season_id 本就为 0）。`cover.jpg`/`danmaku.pb` 仍会照常下载
-（旧版读取时会忽略多余文件）。
+曾尝试让新版 App 写入缓存时把 entry.json/index.json 转成旧版格式，
+实测无效（写入路径/时序与预期不符），且需求上不再需要，该功能已注释移除，
+相关 Hook（`hookOldFormatOutput`/`toOldFormat`）不再启用。
 
 ## 设置开关
 
-两个功能可单独开关（默认都开启）：
+目前保留一个开关（默认开启）：
 
 - **识别旧版缓存**：控制 getter/gate Hook（全盘扫描登记 + 禁用无效缓存清理）
-- **旧版格式写缓存**：控制 entry.json / index.json 的旧版格式转换
 
 开关位置：
 
