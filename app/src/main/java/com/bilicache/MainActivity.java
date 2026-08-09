@@ -69,7 +69,8 @@ public class MainActivity extends Activity {
         swExportLog.setChecked(prefs.getBoolean(BiliPrefs.KEY_EXPORT_LOG, false));
         root.addView(buildCard(
                 "导出日志",
-                "开启后，模块日志会持续同步到公共 Download/BiliCache.log（由 B 站进程写入，需重启 B 站生效）；调试排障时开启",
+                "开启后，模块日志会持续同步到公共 Download/BiliCache.log；\n"
+                        + "若系统限制会回退到 B 站 files/Download 目录并 Toast 提示路径，调试排障时开启",
                 swExportLog));
 
         SharedPreferences.OnSharedPreferenceChangeListener listener = (prefs1, key) -> {
