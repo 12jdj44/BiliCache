@@ -81,7 +81,7 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         BiliLog.log("module loaded, versionCode=" + versionCode
                 + " versionName=" + versionName + " package=" + context.getPackageName());
         startExportLoop();
-        BiliLog.toast("BiliCache 模块已加载 v1.8");
+        BiliLog.toast("BiliCache 模块已加载 v1.9");
 
         // 通用配置 Hook：不依赖版本映射，直接拦迁移计数读取（识别旧版缓存主开关的兜底）
         hookUniversalConfig(classLoader);
@@ -268,6 +268,20 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 BiliLog.log("FLV resolver fix error: " + t);
                             }
                         }
+
+                        @Override
+                        protected void afterHookedMethod(MethodHookParam param) {
+                            try {
+                                BiliLog.log("resolve result: " + param.getResult()
+                                        + " throwable=" + param.getThrowable());
+                                Object result = param.getResult();
+                                if (result != null) {
+                                    BiliLog.log("resolve playIndex: " + describePlayIndex(result));
+                                }
+                            } catch (Throwable t) {
+                                BiliLog.log("resolve after-log error: " + t);
+                            }
+                        }
                     };
             // 方法名因版本而异（8.75 是 i，9.6 是 f），按签名动态匹配
             boolean hooked = false;
@@ -436,6 +450,42 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
     }
 
     /**
+     * 从 MediaResource 里提取 PlayIndex 的关键字段（mNormalMrl / 分段数量 / 画质），
+     * 用于确认播放器拿到的本地路径是否正确。
+     */
+    private static String describePlayIndex(Object mediaResource) {
+        try {
+            StringBuilder sb = new StringBuilder();
+            Object vodIndex = XposedHelpers.getObjectField(mediaResource, "mVodIndex");
+            if (vodIndex == null) {
+                sb.append("mVodIndex=null ");
+            } else {
+                Object list = XposedHelpers.getObjectField(vodIndex, "mVodList");
+                if (list instanceof java.util.List) {
+                    java.util.List<?> items = (java.util.List<?>) list;
+                    sb.append("playListSize=").append(items.size()).append(" ");
+                    for (Object pi : items) {
+                        Object mrl = XposedHelpers.getObjectField(pi, "mNormalMrl");
+                        Object seg = XposedHelpers.getObjectField(pi, "mSegmentList");
+                        Object q = XposedHelpers.getObjectField(pi, "mQuality");
+                        Object from = XposedHelpers.getObjectField(pi, "mFrom");
+                        sb.append("mrl=").append(mrl)
+                                .append(" segs=").append(seg instanceof java.util.List
+                                        ? ((java.util.List<?>) seg).size() : seg)
+                                .append(" q=").append(q)
+                                .append(" from=").append(from).append(" ");
+                    }
+                } else {
+                    sb.append("mVodList=?").append(" ");
+                }
+            }
+            return sb.toString();
+        } catch (Throwable t) {
+            return "describePlayIndex err: " + t;
+        }
+    }
+
+    /**
      * 在 B 站设置页（PreferenceFragment）里注入 “Bili Cache” 入口。
      * BiliPreferencesFragment 所有版本都有；WideBiliPreferencesFragment 仅 9.0+。
      */
@@ -480,19 +530,29 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         XposedHelpers.callMethod(preference, "setTitle", "Bili Cache");
         XposedHelpers.callMethod(preference, "setSummary", "旧版缓存识别 / 旧版格式写缓存");
 
-        Class<?> listenerClass = Class.forName(
-                "androidx.preference.Preference$OnPreferenceClickListener", false, classLoader);
-        Object listener = Proxy.newProxyInstance(
-                classLoader,
-                new Class<?>[]{listenerClass},
-                (proxy, method, args) -> {
-                    if ("onPreferenceClick".equals(method.getName())) {
-                        startBiliCacheSettings(context);
-                        return true;
-                    }
-                    return false;
-                });
-        XposedHelpers.callMethod(preference, "setOnPreferenceClickListener", listener);
+        // 8.75 等版本里 OnPreferenceClickListener 接口名被混淆，按 setter 参数类型动态找
+        boolean listenerSet = false;
+        for (java.lang.reflect.Method m : preferenceClass.getMethods()) {
+            if ("setOnPreferenceClickListener".equals(m.getName())) {
+                Class<?> listenerType = m.getParameterTypes()[0];
+                Object listener = Proxy.newProxyInstance(
+                        classLoader,
+                        new Class<?>[]{listenerType},
+                        (proxy, method, args) -> {
+                            if ("onPreferenceClick".equals(method.getName())) {
+                                startBiliCacheSettings(context);
+                                return true;
+                            }
+                            return false;
+                        });
+                m.invoke(preference, listener);
+                listenerSet = true;
+                break;
+            }
+        }
+        if (!listenerSet) {
+            BiliLog.log("add settings entry: no setOnPreferenceClickListener found");
+        }
 
         // 尽量插到列表最前面，失败则追加到末尾
         try {
