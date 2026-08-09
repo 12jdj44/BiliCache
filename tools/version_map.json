@@ -1,0 +1,2228 @@
+{
+ "8.61.0": {
+  "file": "8.61.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/m$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.61.1": {
+  "file": "8.61.1.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/m$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.62.0": {
+  "file": "8.62.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/m$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.63.0": {
+  "file": "8.63.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/m$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.64.0": {
+  "file": "8.64.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/n$a;",
+    "method": "k",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.65.0": {
+  "file": "8.65.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "k",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.66.0": {
+  "file": "8.66.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "k",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.67.0": {
+  "file": "8.67.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "k",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.68.0": {
+  "file": "8.68.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.69.0": {
+  "file": "8.69.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.70.0": {
+  "file": "8.70.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.71.0": {
+  "file": "8.71.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/p$a;",
+    "method": "j",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "I",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.72.0": {
+  "file": "8.72.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.73.0": {
+  "file": "8.73.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.74.0": {
+  "file": "8.74.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/offline/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/offline/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/offline/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/offline/storage/DataStorageWrapper$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$init$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/offline/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/offline/storage/DataStorageWrapper;",
+   "[Lvideo/offline/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.75.0": {
+  "file": "8.75.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.76.0": {
+  "file": "8.76.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.77.0": {
+  "file": "8.77.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.78.0": {
+  "file": "8.78.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.79.0": {
+  "file": "8.79.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.80.0": {
+  "file": "8.80.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.81.0": {
+  "file": "8.81.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.82.0": {
+  "file": "8.82.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/r$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.83.0": {
+  "file": "8.83.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.84.0": {
+  "file": "8.84.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.85.0": {
+  "file": "8.85.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.86.0": {
+  "file": "8.86.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.87.0": {
+  "file": "8.87.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.88.0": {
+  "file": "8.88.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.89.0": {
+  "file": "8.89.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.90.0": {
+  "file": "8.90.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.90.1": {
+  "file": "8.90.1.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.90.2": {
+  "file": "8.90.2.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.91.0": {
+  "file": "8.91.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.91.1": {
+  "file": "8.91.1.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.92.0": {
+  "file": "8.92.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.92.1": {
+  "file": "8.92.1.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.93.0": {
+  "file": "8.93.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.94.0": {
+  "file": "8.94.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.95.0": {
+  "file": "8.95.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "N",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.96.0": {
+  "file": "8.96.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/s$a;",
+    "method": "n",
+    "return": "I",
+    "params_off": 0,
+    "access": 17
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "O",
+   "return": "Z",
+   "access": 18
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.97.0": {
+  "file": "8.97.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.98.0": {
+  "file": "8.98.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "8.99.0": {
+  "file": "8.99.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.0.0": {
+  "file": "9.0.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.1.0": {
+  "file": "9.1.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.1.1": {
+  "file": "9.1.1.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.2.0": {
+  "file": "9.2.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.3.0": {
+  "file": "9.3.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/b$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.4.0": {
+  "file": "9.4.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/a$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.5.0": {
+  "file": "9.5.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/b$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ },
+ "9.6.0": {
+  "file": "9.6.0.zip",
+  "getters": [
+   {
+    "class": "Lvideo/biz/offline/base/infra/utils/c$a;",
+    "method": "a",
+    "return": "I",
+    "params_off": 0,
+    "access": 9
+   }
+  ],
+  "gate": {
+   "class": "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "method": "o",
+   "return": "Z",
+   "access": 9
+  },
+  "wrappers": [
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$addVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$backup$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkDataSource$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$checkIfNotInDB$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$cleanInvalidSourceIfNeed$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$init$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$migrate$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$realUpdateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$1;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$removeVideo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateAuthCode$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2$a;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateDrmCredentialInfo$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$updateVideos$2;",
+   "Lvideo/biz/offline/base/infra/storage/DataStorageWrapper;",
+   "[Lvideo/biz/offline/base/infra/storage/DataStorageWrapper$DataSource;"
+  ]
+ }
+}
