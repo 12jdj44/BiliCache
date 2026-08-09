@@ -89,6 +89,19 @@ DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解�
   以及是否抛异常，便于定位黑屏到底是解析失败还是播放器不支持；
 - Toast 内容同步写入日志，MIUI 屏蔽 Toast 时也能在日志里看到。
 
+## v1.10：FLV 缓存直连播放修复
+
+通过 8.58 登记再升级能播放，说明 8.75 播放器支持 `.blv`，问题在数据库记录里
+实体元数据不完整（画质/描述/分段大小缺失、媒体类型为 DASH）。v1.10 在播放解析
+成功后再补一手：
+
+- `mQuality` 为 0 时按目录名 `lua.flvXXX.bili2api.<qn>` 取画质；
+- `mDescription`/`mPithyDescription` 为空时从 index.json 读描述；
+- 分段 `mBytes` 为 0 时用实际 `.blv` 文件大小；
+- 扫描 Hook 覆盖 8.75（`utils.a0#p`）和 9.6（`utils.i#e`），登记时直接标 FLV。
+
+这样无需“先装 8.58 登记再升级”，8.75 直连旧 FLV 缓存即可播放。
+
 ## 确认模块生效
 
 1. LSPosed 管理器 → 模块勾选 “Bili Cache” → **作用域勾选 `tv.danmaku.bili`** → 重启；
