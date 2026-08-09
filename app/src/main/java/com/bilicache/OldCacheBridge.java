@@ -153,14 +153,19 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                         String path = BiliLog.exportToDownloads();
                         if (path != null) {
                             BiliLog.log("log exported: " + path);
+                            BiliLog.toastExportResult("BiliCache 日志已导出: " + path);
+                        } else {
+                            BiliLog.toastExportResult("BiliCache 日志导出失败：请用 adb pull "
+                                    + "/sdcard/Android/data/tv.danmaku.bili/files/BiliCache.log "
+                                    + "或从 LSPosed 日志复制 [BiliCache] 行");
                         }
                     }
                 } catch (Throwable ignored) {
                 }
-                new Handler(Looper.getMainLooper()).postDelayed(this, 3000);
+                new Handler(Looper.getMainLooper()).postDelayed(this, 5000);
             }
         };
-        new Handler(Looper.getMainLooper()).postDelayed(task, 3000);
+        new Handler(Looper.getMainLooper()).postDelayed(task, 1000);
     }
 
     /**
