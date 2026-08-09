@@ -18,6 +18,8 @@ import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
+import org.json.JSONObject;
+
 /**
  * LSPosed 模块：让 B 站 8.61.0 - 9.6.0 启动时直接扫描识别旧版缓存。
  *
@@ -277,6 +279,7 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                                 Object result = param.getResult();
                                 if (result != null) {
                                     BiliLog.log("resolve playIndex: " + describePlayIndex(result));
+                                    fixPlayIndex(result, (File) param.args[1]);
                                 }
                             } catch (Throwable t) {
                                 BiliLog.log("resolve after-log error: " + t);
@@ -306,30 +309,41 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         }
 
         // 2) 扫描入口：entry 的 type_tag 以 lua. 开头（FLV 格式特征）时，登记时就直接标 FLV
-        try {
-            XposedHelpers.findAndHookMethod(
-                    "video.biz.offline.base.infra.utils.i", classLoader, "e", File.class,
-                    new XC_MethodHook() {
-                        @Override
-                        protected void afterHookedMethod(MethodHookParam param) {
-                            try {
-                                Object entity = param.getResult();
-                                if (entity == null) {
-                                    return;
+        //    不同版本扫描方法名不同（8.75: utils.a0#p；9.6: utils.i#e），都试一遍
+        String[] scannerCandidates = {
+                "video.biz.offline.base.infra.utils.a0",
+                "video.biz.offline.base.infra.utils.i"
+        };
+        String[] scannerMethods = {"p", "e"};
+        for (String cls : scannerCandidates) {
+            for (String mth : scannerMethods) {
+                try {
+                    XposedHelpers.findAndHookMethod(
+                            cls, classLoader, mth, File.class,
+                            new XC_MethodHook() {
+                                @Override
+                                protected void afterHookedMethod(MethodHookParam param) {
+                                    try {
+                                        Object entity = param.getResult();
+                                        if (entity == null) {
+                                            return;
+                                        }
+                                        BiliLog.log("scan entry -> entity " + entity
+                                                + " typeTag lua=" + hasLuaTypeTag(entity));
+                                        if (hasLuaTypeTag(entity)) {
+                                            forceFlvMediaType(entity);
+                                        }
+                                    } catch (Throwable t) {
+                                        BiliLog.log("FLV scan fix error: " + t);
+                                    }
                                 }
-                                BiliLog.log("scan entry -> entity " + entity
-                                        + " typeTag lua=" + hasLuaTypeTag(entity));
-                                if (hasLuaTypeTag(entity)) {
-                                    forceFlvMediaType(entity);
-                                }
-                            } catch (Throwable t) {
-                                BiliLog.log("FLV scan fix error: " + t);
-                            }
-                        }
-                    });
-            BiliLog.log("hooked utils.i#e (FLV scan fix)");
-        } catch (Throwable t) {
-            BiliLog.log("utils.i#e hook skip: " + t);
+                            });
+                    BiliLog.log("hooked scanner " + cls + "#" + mth + " (FLV scan fix)");
+                    break;
+                } catch (Throwable t) {
+                    // 该方法不存在，试下一个
+                }
+            }
         }
 
         // 3) 离线诊断校验入口：validateLocalResource(entity)，同样强制 FLV 并记录结果
@@ -482,6 +496,100 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             return sb.toString();
         } catch (Throwable t) {
             return "describePlayIndex err: " + t;
+        }
+    }
+
+    /**
+     * 播放解析成功后，补齐 PlayIndex 的关键字段：
+     *  - mQuality 为 0 时按目录名（lua.flvXXX.bili2api.<qn>）取画质
+     *  - mDescription / mPithyDescription 为空时从 index.json 读 description
+     *  - Segment.mBytes 为 0 时用实际文件长度
+     * 这些字段在 com.bilibili.lib.media.resource 里未混淆，可直接读写。
+     */
+    private static void fixPlayIndex(Object mediaResource, File dir) {
+        try {
+            Object vodIndex = XposedHelpers.getObjectField(mediaResource, "mVodIndex");
+            if (vodIndex == null) {
+                return;
+            }
+            Object list = XposedHelpers.getObjectField(vodIndex, "mVodList");
+            if (!(list instanceof java.util.List)) {
+                return;
+            }
+            for (Object playIndex : (java.util.List<?>) list) {
+                int quality = XposedHelpers.getIntField(playIndex, "mQuality");
+                if (quality <= 0) {
+                    int qn = qnFromDir(dir);
+                    int fixed = qn > 0 ? qn : 16;
+                    XposedHelpers.setIntField(playIndex, "mQuality", fixed);
+                    BiliLog.log("fixPlayIndex: mQuality 0 -> " + fixed);
+                }
+                String desc = (String) XposedHelpers.getObjectField(playIndex, "mDescription");
+                if (desc == null || desc.isEmpty()) {
+                    String d = descriptionFromIndex(dir);
+                    if (d != null) {
+                        XposedHelpers.setObjectField(playIndex, "mDescription", d);
+                        XposedHelpers.setObjectField(playIndex, "mPithyDescription", d);
+                        BiliLog.log("fixPlayIndex: description -> " + d);
+                    }
+                }
+                Object segments = XposedHelpers.getObjectField(playIndex, "mSegmentList");
+                if (segments instanceof java.util.List) {
+                    for (Object seg : (java.util.List<?>) segments) {
+                        long bytes = XposedHelpers.getLongField(seg, "mBytes");
+                        if (bytes <= 0) {
+                            String url = (String) XposedHelpers.getObjectField(seg, "mUrl");
+                            if (url != null) {
+                                File f = new File(url);
+                                if (f.exists()) {
+                                    XposedHelpers.setLongField(seg, "mBytes", f.length());
+                                    BiliLog.log("fixPlayIndex: segment bytes -> " + f.length());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Throwable t) {
+            BiliLog.log("fixPlayIndex error: " + t);
+        }
+    }
+
+    /** 从 "lua.flv360.bili2api.16" 这类目录名提取 qn=16。 */
+    private static int qnFromDir(File dir) {
+        try {
+            if (dir == null) {
+                return 0;
+            }
+            String name = dir.getName();
+            int idx = name.lastIndexOf('.');
+            if (idx < 0 || idx == name.length() - 1) {
+                return 0;
+            }
+            return Integer.parseInt(name.substring(idx + 1));
+        } catch (Throwable t) {
+            return 0;
+        }
+    }
+
+    /** 从 index.json 读 description（如 "流畅 360P"）。 */
+    private static String descriptionFromIndex(File dir) {
+        try {
+            if (dir == null) {
+                return null;
+            }
+            File index = new File(dir, "index.json");
+            if (!index.exists()) {
+                return null;
+            }
+            String text = new String(
+                    java.nio.file.Files.readAllBytes(index.toPath()),
+                    java.nio.charset.StandardCharsets.UTF_8);
+            JSONObject obj = new JSONObject(text);
+            String desc = obj.optString("description", null);
+            return (desc == null || desc.isEmpty()) ? null : desc;
+        } catch (Throwable t) {
+            return null;
         }
     }
 
