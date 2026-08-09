@@ -31,7 +31,8 @@ public final class BiliPrefs {
     }
 
     public static boolean exportLog() {
-        return getBoolean(KEY_EXPORT_LOG, false);
+        // 读取失败时默认按开启处理，保证日志尽量能导出
+        return getBoolean(KEY_EXPORT_LOG, true);
     }
 
     private static boolean getBoolean(String key, boolean def) {
