@@ -81,7 +81,7 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
         BiliLog.log("module loaded, versionCode=" + versionCode
                 + " versionName=" + versionName + " package=" + context.getPackageName());
         startExportLoop();
-        BiliLog.toast("BiliCache 模块已加载 v1.7");
+        BiliLog.toast("BiliCache 模块已加载 v1.8");
 
         // 通用配置 Hook：不依赖版本映射，直接拦迁移计数读取（识别旧版缓存主开关的兜底）
         hookUniversalConfig(classLoader);
@@ -91,6 +91,8 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             BiliLog.log("unsupported versionCode " + versionCode
                     + " (" + versionName + "), supported: " + VersionMap.MAP.size()
                     + " versions (8.61.0-9.6.0)");
+            BiliLog.toast("BiliCache v1.8: 版本未匹配 vcode=" + versionCode
+                    + "，已启用通用模式（识别旧版缓存仍可用）");
             return;
         }
 
@@ -282,9 +284,11 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
             }
             if (!hooked) {
                 BiliLog.log("OfflineResolverKt: no (OfflineVideoEntity, File) method found");
+                BiliLog.toast("BiliCache v1.8: FLV 播放修复 Hook 未挂上（找不到解析方法）");
             }
         } catch (Throwable t) {
             BiliLog.log("OfflineResolverKt hook skip: " + t);
+            BiliLog.toast("BiliCache v1.8: FLV 播放修复 Hook 失败: " + t);
         }
 
         // 2) 扫描入口：entry 的 type_tag 以 lua. 开头（FLV 格式特征）时，登记时就直接标 FLV
@@ -458,6 +462,7 @@ public class OldCacheBridge implements IXposedHookLoadPackage {
                 BiliLog.log("settings entry injected into " + fragment);
             } catch (Throwable t) {
                 BiliLog.log("settings hook skip " + fragment + ": " + t);
+                BiliLog.toast("BiliCache v1.8: 设置入口注入失败 " + fragment);
             }
         }
     }
