@@ -78,6 +78,8 @@ DASH 分支找 `video.m4s` 导致黑屏/损坏。v1.4 起模块会在播放解�
   拦截 `c_db_migrate_success_times` 恒返回 0——即使版本号不在映射表里，
   “识别旧版缓存”也能工作；
 - **模块加载 Toast**：B 站启动时 Toast 提示“BiliCache 模块已加载”，方便确认模块是否生效。
+- **失败 Toast（v1.8）**：版本未匹配、FLV Hook 未挂上、设置入口注入失败都会直接 Toast 提示，
+  不依赖 logcat 也能定位问题。
 
 ## 确认模块生效
 
